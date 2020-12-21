@@ -1,6 +1,6 @@
 package Patterns.Behavioral.Visitor;
 
 public interface Visitor {
-    void visit(JuniorDeveloper juniorDeveloper);
-    void visit(SeniorDeveloper seniorDeveloper);
+    void visit(Person1 person1);
+    void visit(Person2 person2);
 }

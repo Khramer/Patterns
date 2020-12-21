@@ -9,6 +9,6 @@ public class ChainMain {
         handler1.HandlerNext(handler2);
         handler2.HandlerNext(handler3);
 
-        handler1.toHelp("Простая проблема", Priority.HARD);
+        handler1.toHelp("Сложная проблема", Priority.HARD);
     }
 }

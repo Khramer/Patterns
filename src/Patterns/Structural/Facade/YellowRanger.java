@@ -1,15 +1,22 @@
 package Patterns.Structural.Facade;
 
-public class YellowRanger {
-    boolean preparation = false;
+public class YellowRanger implements Ranger{
+    public boolean preparation = false;
 
-    public void runLeftLeg(){
+    @Override
+    public void preparation(){
+        preparation = true;
+    }
+
+    @Override
+    public void runLeg(){
         if(preparation)
             System.out.println("передвинуть левую ногу");
         else
             System.out.println("системы левой ноги не активированы");
     }
 
+    @Override
     public void activateRocketEngine(){
         if(preparation)
             System.out.println("активировать ракетный двигатель на левой ноге");
@@ -17,7 +24,9 @@ public class YellowRanger {
             System.out.println("системы левой ноги не активированы");
     }
 
-    public void preparation(){
-        preparation = true;
+    @Override
+    public Boolean getPreparation() {
+        return preparation;
     }
+
 }

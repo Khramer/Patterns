@@ -2,7 +2,6 @@ package Patterns.Creational.Prototype;
 
 public class PrototypeMain {
     public static void main(String[] args) {
-
         StormStrooper stormTrooperBase1 = new StormTrooperBase();
         System.out.println("1 - " + stormTrooperBase1);
 
@@ -14,7 +13,6 @@ public class PrototypeMain {
 
         System.out.println("1 - " + stormTrooperBase1);
         System.out.println("2 - " + stormTrooperBase2);
-
 
         FabricStormTrooper fabricStormTrooper = new FabricStormTrooper(stormTrooperBase1);
         StormStrooper stormStrooper = fabricStormTrooper.makeCopy();

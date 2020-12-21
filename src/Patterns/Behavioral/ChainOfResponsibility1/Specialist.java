@@ -2,7 +2,7 @@ package Patterns.Behavioral.ChainOfResponsibility1;
 
 public class Specialist implements Handler{
     private Handler handlerNext;
-    private Priority priority;
+    private final Priority priority;
 
     Specialist(Priority priority) {
         this.priority = priority;

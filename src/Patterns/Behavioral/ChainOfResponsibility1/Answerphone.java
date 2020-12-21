@@ -2,7 +2,7 @@ package Patterns.Behavioral.ChainOfResponsibility1;
 
 public class Answerphone implements Handler {
     private Handler handlerNext;
-    private Priority priority;
+    private final Priority priority;
 
     Answerphone(Priority priority){
         this.priority = priority;
@@ -19,6 +19,7 @@ public class Answerphone implements Handler {
             System.out.println("Автоответчик нашел ответ");
         }else{
             if(handlerNext != null){
+                System.out.println("Автоответчик не справился");
                 handlerNext.toHelp(message, priorityMessage);
             }
         }

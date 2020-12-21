@@ -6,7 +6,6 @@ public class Game {
     int mana;
     // и множество других параметров
 
-
     public Save save(){
         return new Save (lvl, hp, mana);
     }

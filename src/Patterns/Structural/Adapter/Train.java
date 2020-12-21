@@ -1,9 +1,7 @@
 package Patterns.Structural.Adapter;
 
 public class Train {
-
-    @Override
-    public String toString() {
+    public String goTrain() {
         return "Поезд уезжает в даль";
     }
 }

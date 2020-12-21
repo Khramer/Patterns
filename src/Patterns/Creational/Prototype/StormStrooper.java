@@ -1,10 +1,10 @@
 package Patterns.Creational.Prototype;
 
 public abstract class StormStrooper {
-    protected int heal = 10;
+    protected int heal = 100;
     protected int armour = 10;
     protected int damage = 10;
-    protected int precision = 10;
+    protected int precision = 100;
 
     public StormStrooper(){}
 

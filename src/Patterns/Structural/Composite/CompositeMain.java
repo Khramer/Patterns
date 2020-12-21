@@ -37,6 +37,5 @@ public class CompositeMain {
         superBag.addItem(bag3);
 
         superBag.use();
-
     }
 }

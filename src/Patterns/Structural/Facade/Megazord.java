@@ -1,19 +1,19 @@
 package Patterns.Structural.Facade;
 
 public class Megazord {
-    private BlueRanger blueRanger;
-    private YellowRanger yellowRanger;
+    private Ranger blueRanger;
+    private Ranger yellowRanger;
 
-    Megazord(BlueRanger blueRanger, YellowRanger yellowRanger){
+    Megazord(Ranger blueRanger, Ranger yellowRanger){
         this.blueRanger = blueRanger;
         this.yellowRanger = yellowRanger;
     }
 
     public void run(int count){
-        if(yellowRanger.preparation && blueRanger.preparation){
+        if(yellowRanger.getPreparation() && blueRanger.getPreparation()){
             for(int i = 0; i < count; i++){
-                blueRanger.runRightLeg();
-                yellowRanger.runLeftLeg();
+                blueRanger.runLeg();
+                yellowRanger.runLeg();
             }
         }else {
             System.out.println("Не все системы не активированны");
@@ -22,7 +22,7 @@ public class Megazord {
     }
 
     public void fly(){
-        if(yellowRanger.preparation && blueRanger.preparation){
+        if(yellowRanger.getPreparation() && blueRanger.getPreparation()){
             blueRanger.activateRocketEngine();
             yellowRanger.activateRocketEngine();
         }else {

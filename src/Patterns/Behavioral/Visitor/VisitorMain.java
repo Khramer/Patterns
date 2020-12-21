@@ -2,12 +2,13 @@ package Patterns.Behavioral.Visitor;
 
 public class VisitorMain {
     public static void main(String[] args) {
-        JuniorDeveloper juniorDeveloper = new JuniorDeveloper();
-        SeniorDeveloper seniorDeveloper = new SeniorDeveloper();
+        Person1 person1 = new Person1();
+        Person2 person2 = new Person2();
 
-        juniorDeveloper.accept(new SpanishInquisition());
-        seniorDeveloper.accept(new SpanishInquisition());
-        juniorDeveloper.accept(new DrAibolit());
-        seniorDeveloper.accept(new DrAibolit());
+        person1.accept(new DrAibolit());
+        person2.accept(new DrAibolit());
+        person1.accept(new SpanishInquisition());
+        person2.accept(new SpanishInquisition());
+
     }
 }

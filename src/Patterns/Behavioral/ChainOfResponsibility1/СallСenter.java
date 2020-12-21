@@ -2,7 +2,7 @@ package Patterns.Behavioral.ChainOfResponsibility1;
 
 public class СallСenter implements Handler{
     private Handler handlerNext;
-    private Priority priority;
+    private final Priority priority;
 
     СallСenter(Priority priority) {
         this.priority = priority;
@@ -19,6 +19,7 @@ public class СallСenter implements Handler{
             System.out.println("Коллцентр нашел ответ");
         }else{
             if(handlerNext != null){
+                System.out.println("Колцентр нашел ответ");
                 handlerNext.toHelp(message, priorityMessage);
             }
         }

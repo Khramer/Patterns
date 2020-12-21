@@ -4,12 +4,14 @@ public class MandalorianVer1 {
     private static MandalorianVer1 mandalorian;
 
     private String name = "Джанго Фетт";
+    private static int num = 0;
 
     private MandalorianVer1(){}
 
     public static MandalorianVer1 create(){
         if(mandalorian == null){
             mandalorian = new MandalorianVer1();
+            num++;
         }
         return mandalorian;
     }
@@ -25,6 +27,7 @@ public class MandalorianVer1 {
     @Override
     public String toString() {
         return "Mandalorian{" +
+                "num " + num +
                 "name='" + name + '\'' +
                 '}';
     }
